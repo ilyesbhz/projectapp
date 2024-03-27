@@ -1,0 +1,26 @@
+{
+  "@@locale": "fr",
+  "welcomeMessage": "Bienvenue",
+  "description": "description",
+  "loginbtn" : "Se connecter",
+  "signupbtn" : "Créer un compte",
+
+
+  "welcomelogin": "Se connecter",
+    "desclogin":"Se connecter à votre compte",
+    "id":"ID",
+    "password":"Mot de passe",
+    "btnlogin":"Se connecter",
+    "noacc":"je n'ai pas de compte?",
+    "create":"Crée un compte",
+
+    "welcomesignup": "S'inscrire",
+    "descsignup": "Créer un compte",
+    "companyname" : "Nom d'entreprise",
+    "contactname" : "Nom de contact",
+    "email" : "Adresse Email",
+    "phone" :"Téléphone",
+    "btnsignup" : "S'inscrire",
+    "noaccs" : "J'ai déja un compte?",
+    "loginsystem" : "Se Connecter"
+}

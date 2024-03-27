@@ -9,7 +9,16 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-    
+  # Pour la liste des agents
+  cupertino_icons: ^1.0.2
+  list_tile_more_customizable: ^3.0.0
+
+  # Pour la lecture audio
+  audioplayers: ^6.0.0
+
+  flutter_localizations:
+    sdk: flutter
+  intl: any
 
   intl_phone_field: ^3.2.0
   flutter_locales: ^3.0.1
@@ -20,10 +29,7 @@ dev_dependencies:
   flutter_lints: ^3.0.0
 
 flutter:
+  generate: true
   uses-material-design: true
   assets:
     - assets/logo.png
-    - assets/locales/en.json
-    - assets/locales/de.json
-    - assets/locales/fr.json
-    - assets/locales/ar.json

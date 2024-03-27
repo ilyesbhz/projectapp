@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
+import 'package:test1/classes/language_constants.dart';
+import 'package:test1/login.dart';
 
 class SignUp extends StatelessWidget {
   @override
@@ -33,7 +35,7 @@ class SignUp extends StatelessWidget {
               Column(
                 children: <Widget>[
                   Text(
-                    "Sign up",
+                    translation(context).welcomesignup,
                     style: TextStyle(
                       fontSize: 30,
                       fontWeight: FontWeight.bold,
@@ -43,19 +45,19 @@ class SignUp extends StatelessWidget {
                     height: 20,
                   ),
                   Text(
-                    "Create an account",
+                    translation(context).descsignup,
                     style: TextStyle(fontSize: 15, color: Colors.grey[700]),
                   )
                 ],
               ),
               Column(
                 children: <Widget>[
-                  inputFile(label: "Nom d'entreprise"),
-                  inputFile(label: "Nom du contact"),
-                  inputFile(label: "Email"),
+                  inputFile(label: translation(context).companyname),
+                  inputFile(label: translation(context).contactname),
+                  inputFile(label:translation(context).email),
                   IntlPhoneField(
                     decoration: InputDecoration(
-                      labelText: "Phone Number",
+                      labelText: translation(context).phone,
                       border: OutlineInputBorder(
                         borderSide: BorderSide()
                       )
@@ -86,7 +88,7 @@ class SignUp extends StatelessWidget {
                     borderRadius: BorderRadius.circular(50),
                   ),
                   child: Text(
-                    "Sign up",
+                    translation(context).btnsignup,
                     style: TextStyle(
                       fontWeight: FontWeight.w600,
                       fontSize: 18,
@@ -99,11 +101,19 @@ class SignUp extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Text("Already have an account?"),
-                  Text(" Login", style: TextStyle(
-                    fontWeight: FontWeight.w600,
-                    fontSize: 18
-                  ),)
+                  Text(translation(context).noaccs),
+                  TextButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage()));                  
+                    },
+                  child: Text(
+                    translation(context).loginsystem,
+                    style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 18,
+                  ),
+                  ),
+                  ),
                 ],
               )
             ],

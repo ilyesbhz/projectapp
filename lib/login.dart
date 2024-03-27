@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import 'package:test1/classes/language_constants.dart';
+import 'package:test1/signup.dart';
 
 class LoginPage extends StatelessWidget {
   @override
@@ -30,15 +31,15 @@ class LoginPage extends StatelessWidget {
           children: <Widget>[
             Column(
               children: <Widget>[
-                const Text(
-                  "Login",
+                 Text(
+                  translation(context).welcomelogin,
                   style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
                 ),
                 SizedBox(
                   height: 20,
                 ),
                 Text(
-                  "Login to your account",
+                  translation(context).desclogin,
                   style: TextStyle(fontSize: 15, color: Colors.grey[700]),
                 )
               ],
@@ -47,23 +48,14 @@ class LoginPage extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 40),
               child: Column(
                 children: <Widget>[
-                  inputFile(label: "ID"),
-                  inputFile(label: "Password", obscureText: true)
+                  inputFile(label: translation(context).id),
+                  inputFile(label: translation(context).password, obscureText: true)
                 ],
               ),
             ),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 40),
               child: Container(
-                /* padding: EdgeInsets.only(top: 30, left: 3),
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(50),
-                    border: Border(
-                      bottom: BorderSide(color: Colors.black),
-                      top: BorderSide(color: Colors.black),
-                      left: BorderSide(color: Colors.black),
-                      right: BorderSide(color: Colors.black),
-                    )), */
                 child: MaterialButton(
                   minWidth: double.infinity,
                   height: 60,
@@ -74,7 +66,7 @@ class LoginPage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(50),
                   ),
                   child: Text(
-                    "Login",
+                    translation(context).btnlogin,
                     style: TextStyle(
                       fontWeight: FontWeight.w600,
                       fontSize: 18,
@@ -87,14 +79,19 @@ class LoginPage extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Text("Don't have an account?"),
-                Text(
-                  "Sign up",
-                  style: TextStyle(
-                    fontWeight: FontWeight.w600,
-                    fontSize: 18,
+                Text(translation(context).noacc),
+                TextButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => SignUp()));                  
+                    },
+                  child: Text(
+                    translation(context).create,
+                    style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 18,
                   ),
-                )
+                ),
+                ),
               ],
             ),
             Container(
@@ -102,7 +99,7 @@ class LoginPage extends StatelessWidget {
               height: 200,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage("assets/background.png"),
+                    image: AssetImage("assets/login.png"),
                     fit: BoxFit.fitHeight),
               ),
             )
