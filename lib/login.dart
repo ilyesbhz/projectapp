@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:test1/classes/language_constants.dart';
 import 'package:test1/signup.dart';
+import 'package:test1/agent_page.dart';
 
 class LoginPage extends StatelessWidget {
   @override
@@ -59,7 +60,9 @@ class LoginPage extends StatelessWidget {
                 child: MaterialButton(
                   minWidth: double.infinity,
                   height: 60,
-                  onPressed: () {},
+                  onPressed: () {
+                     Navigator.push(context, MaterialPageRoute(builder: (context) => AgentPage()));
+                  },
                   color: Color(0xFFff7a3d),
                   elevation: 0,
                   shape: RoundedRectangleBorder(
@@ -73,6 +76,7 @@ class LoginPage extends StatelessWidget {
                       color: Colors.white,
                     ),
                   ),
+                  
                 ),
               ),
             ),
@@ -98,9 +102,9 @@ class LoginPage extends StatelessWidget {
               padding: EdgeInsets.only(top: 100),
               height: 200,
               decoration: BoxDecoration(
-                image: DecorationImage(
+                /* image: DecorationImage(
                     image: AssetImage("assets/login.png"),
-                    fit: BoxFit.fitHeight),
+                    fit: BoxFit.fitHeight), */
               ),
             )
           ],

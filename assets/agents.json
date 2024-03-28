@@ -1,0 +1,20 @@
+[
+    {
+      "id": "1",
+      "nom": "Agent Smith",
+      "nationalite": "USA",
+      "photo": "https://example.com/agent_smith.jpg",
+      "voix": "https://example.com/agent_smith_voice.mp3",
+      "coutHeure": 100.0
+    },
+    {
+      "id": "2",
+      "nom": "Agent Jones",
+      "nationalite": "UK",
+      "photo": "https://example.com/agent_jones.jpg",
+      "voix": "https://example.com/agent_jones_voice.mp3",
+      "coutHeure": 80.5
+    }
+    
+  ]
+  

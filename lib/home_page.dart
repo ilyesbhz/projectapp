@@ -14,7 +14,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final GlobalKey<FormState> _key = GlobalKey<FormState>();
 
   void _showSuccessDialog() {
     showTimePicker(context: context, initialTime: TimeOfDay.now());
